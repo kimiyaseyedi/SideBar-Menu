@@ -1,0 +1,123 @@
+/* Import Google Font - Poppins */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.mainbox {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+}
+.mainbox .sidebarmenu {
+  position: fixed;
+  height: 100vh;
+  width: 280px;
+  left: -280px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+/* logo */
+.sidebarmenu .logo a {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  position: absolute;
+  font-weight: 500;
+  left: 50px;
+  line-height: 60px;
+}
+/* menu */
+.sidebarmenu .menu {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+}
+.sidebarmenu .menu li {
+  margin-top: 6px;
+  padding: 14px 20px;
+  transition: all 300ms linear;
+}
+.sidebarmenu .menu i {
+  color: #fff;
+  font-size: 20px;
+  padding-right: 8px;
+}
+.sidebarmenu .menu a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+.sidebarmenu .menu li:hover {
+  border-left: 1px solid #fff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+}
+/* social media */
+div.mainbox > div.sidebarmenu > div.socialmedia {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+.socialmedia i {
+  padding: 0 5px;
+  color: #fff;
+  opacity: 0.5;
+  font-size: 20px;
+}
+.socialmedia i:hover {
+  opacity: 1;
+  transition: all 300ms linear;
+}
+/* check input */
+#check {
+  display: none;
+}
+/* labels: colse and open */
+.mainbox .btn_one i {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 16px;
+  line-height: 60px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 300ms linear;
+}
+.sidebarmenu .btn_two i {
+  font-size: 25px;
+  line-height: 60px;
+  position: absolute;
+  left: 240px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 300ms linear;
+}
+.mainbox .btn_one i:hover {
+  font-size: 29px;
+}
+.mainbox .btn_one:hover {
+  font-size: 24px;
+}
+.btn_one i:hover {
+  font-size: 29px;
+}
+.btn_one i:hover {
+  font-size: 24px;
+}
+#check:checked ~ .sidebarmenu {
+  left: 0px;
+}
+#check:checked ~ .sidebarmenu .btn_two i {
+  opacity: 1;
+  color: #fff;
+  scale: 1.5;
+}
+#check:checked ~ .btn_one i {
+  opacity: 0;
+}
